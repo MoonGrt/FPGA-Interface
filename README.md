@@ -15,7 +15,7 @@
 	</a>
 <h3 align="center">FPGA-Comm_interface</h3>
 	<p align="center">
-	This FPGA UART project integrates a UART module into an FPGA design, allowing bidirectional serial communication with external devices. By encapsulating the UART functionality within a print task, data transmission via print commands is simplified within the FPGA logic. This project supports configurable communication settings and enhances FPGA capabilities for interfacing with diverse systems requiring serial communication.
+	This FPGA project features a comprehensive implementation of multiple communication interfaces, including UART, IIC, SPI, and CAN. The UART interface notably supports direct "print" functionality, making it easier to output data and messages directly from the FPGA. This project showcases robust and versatile data exchange capabilities, suitable for a wide range of applications requiring reliable and efficient communication protocols.
 	<br />
 	<a href="https://github.com/MoonGrt/FPGA-Comm_interface"><strong>Explore the docs »</strong></a>
 	<br />
@@ -41,11 +41,6 @@
   </ol>
 </details>
 
-
-<!-- FILE TREE -->
-## File Tree
-
-```
 └─ Project
   ├─ README.md
   ├─ /CAN/
@@ -67,10 +62,6 @@
         ├─ top.v
         ├─ uart_rx.v
         └─ uart_tx.v
-
-```
-
-
 <!-- CONTRIBUTING -->
 ## Contributing
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
