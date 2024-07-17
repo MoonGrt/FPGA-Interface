@@ -1,0 +1,10 @@
+0.6
+2018.3
+Dec  7 2018
+00:33:28
+F:/Project/FPAG/Vivado_18.3/UART_print/UART_print.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
+F:/Project/FPAG/Vivado_18.3/UART_print/UART_print.srcs/sim_1/top_tb.v,1715316666,verilog,,,,top_tb,,,../../../../UART_print.srcs/sources_1,,,,,
+F:/Project/FPAG/Vivado_18.3/UART_print/UART_print.srcs/sources_1/print.vh,1715342070,verilog,,,,,,,,,,,,
+F:/Project/FPAG/Vivado_18.3/UART_print/UART_print.srcs/sources_1/top.v,1715342077,verilog,,F:/Project/FPAG/Vivado_18.3/UART_print/UART_print.srcs/sources_1/uart_rx.v,F:/Project/FPAG/Vivado_18.3/UART_print/UART_print.srcs/sources_1/print.vh,top,,,../../../../UART_print.srcs/sources_1,,,,,
+F:/Project/FPAG/Vivado_18.3/UART_print/UART_print.srcs/sources_1/uart_rx.v,1715332616,verilog,,F:/Project/FPAG/Vivado_18.3/UART_print/UART_print.srcs/sources_1/uart_tx.v,,uart_rx,,,../../../../UART_print.srcs/sources_1,,,,,
+F:/Project/FPAG/Vivado_18.3/UART_print/UART_print.srcs/sources_1/uart_tx.v,1715332342,verilog,,F:/Project/FPAG/Vivado_18.3/UART_print/UART_print.srcs/sim_1/top_tb.v,,uart_tx,,,../../../../UART_print.srcs/sources_1,,,,,

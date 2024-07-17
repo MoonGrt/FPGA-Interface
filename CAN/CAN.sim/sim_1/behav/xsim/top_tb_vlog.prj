@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../UART_print.srcs/sources_1" \
+"../../../../UART_print.srcs/sources_1/top.v" \
+"../../../../UART_print.srcs/sources_1/uart_rx.v" \
+"../../../../UART_print.srcs/sources_1/uart_tx.v" \
+"../../../../UART_print.srcs/sim_1/top_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
