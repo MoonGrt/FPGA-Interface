@@ -20,7 +20,6 @@ rx(
     .clk      ( clk      ),
     .rst      ( ~rst_n   ),
     .rx_pin   ( rxp      ),
-//    .rx_ready ( 1'b1     ),
     .rx_valid ( rx_valid ),
     .rx_data  ( rx_data  )
 );
@@ -46,7 +45,7 @@ always @(posedge clk or negedge rst_n) begin
         case(state)
             SEND: begin
                 cnt <= 32'd0;
-                `print({"ÄãºÃ GOWIN",16'h0d0a}, STR); // In mobaxterm, support Chinese
+                `print({"ÄãºÃ GOWIN",16'h0d0a}, STR);  // In mobaxterm, support Chinese
                 state <= WAIT;
             end
             WAIT: begin

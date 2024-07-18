@@ -51,9 +51,23 @@
   ├─ README.md
   ├─ /CAN/
   ├─ /IIC/
+  │ └─ /IIC.srcs/
+  │   └─ /sources_1/
+  │     ├─ i2c_edid.v
+  │     ├─ i2c_OV7670_RGB565_config.v
+  │     ├─ i2c_timing_ctrl.v
+  │     └─ ram_init_file.mem
   ├─ /images/
   ├─ /SPI/
   └─ /UART_print/
+    └─ /UART_print.srcs/
+      ├─ /sim_1/
+      │ └─ top_tb.v
+      └─ /sources_1/
+        ├─ print.vh
+        ├─ top.v
+        ├─ uart_rx.v
+        └─ uart_tx.v
 
 ```
 

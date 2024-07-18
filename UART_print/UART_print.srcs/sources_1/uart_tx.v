@@ -1,9 +1,12 @@
 module uart_tx #(
-    parameter CLK_FRE = 50,       // clock frequency (Mhz)
-	parameter BAUD_RATE = 115200  // serial baud rate
+    parameter CLK_FRE = 50,           // clock frequency (Mhz)
+	parameter BAUD_RATE = 115200,     // serial baud rate
+    parameter STOP_BIT_W = 2'b00, 	  //00: stop_bit = 1; 01: stop_bit = 1.5 ; 10 : stop_bit = 2
+	parameter CHECKSUM_MODE = 2'b00,  //00:space, 01:odd ,10:even ,11:mask
+	parameter CHECKSUM_EN = 1'b0
 )(
     input  wire       clk,       // clock input
-    input  wire       rst,       // reset input, high active 
+    input  wire       rst,       // reset input, high active
     input  wire [7:0] din,       // data to send
     input  wire       tx_vaild,  // sent enable
     output wire       tx_ready,  // send ready

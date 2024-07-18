@@ -1,11 +1,13 @@
 module uart_rx #(
-    parameter CLK_FRE = 50,       // clock frequency(Mhz)
-    parameter BAUD_RATE = 115200  // serial baud rate
+    parameter CLK_FRE = 50,           // clock frequency(Mhz)
+    parameter BAUD_RATE = 115200,     // serial baud rate
+    parameter STOP_BIT_W = 2'b00, 	  //00: stop_bit = 1; 01: stop_bit = 1.5 ; 10 : stop_bit = 2
+	parameter CHECKSUM_MODE = 2'b00,  //00:space, 01:odd ,10:even ,11:mask
+	parameter CHECKSUM_EN = 1'b0
 )(
     input  wire       clk,       // clock input
     input  wire       rst,       // asynchronous reset input, high active 
     input  wire       rx_pin,    // serial data input
-    input  wire       rx_ready,   // data receiver module ready
     output reg        rx_valid,  // received serial data is valid
     output reg  [7:0] rx_data    // received serial data
 );
@@ -63,7 +65,7 @@ always @(posedge clk or posedge rst) begin
             if(rx_negedge)
                 state <= STATE_START;
             rx_valid <= 1'b0;
-        end
+            end
         STATE_START:
             if (cycle_cnt == CYCLE - 1)  // one data cycle 
                 state <= STATE_DATA;
@@ -76,12 +78,12 @@ always @(posedge clk or posedge rst) begin
                 bit_cnt <= bit_cnt;
             if (cycle_cnt == CYCLE/2 - 1)
                 rx_bits[bit_cnt] <= rx_pin;
-        end
+            end
         STATE_STOP: begin
             state <= STATE_IDLE;  // avoid missing the next byte receiver, skip stop bit
             rx_valid <= 1'b1;
             rx_data <= rx_bits;
-        end
+            end
         default: 
             state <= STATE_IDLE;
         endcase
