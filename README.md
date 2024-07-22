@@ -52,6 +52,7 @@
   ├─ /CAN/
   ├─ /IIC/
   │ └─ /IIC.srcs/
+  │   ├─ sim_1
   │   └─ /sources_1/
   │     ├─ i2c_edid.v
   │     ├─ i2c_OV7670_RGB565_config.v
@@ -59,6 +60,11 @@
   │     └─ ram_init_file.mem
   ├─ /images/
   ├─ /SPI/
+  │ └─ /SPI.srcs/
+  │   ├─ sim_1
+  │   └─ /sources_1/
+  │     ├─ gamepad.vhd
+  │     └─ spi_driver.v
   └─ /UART_print/
     └─ /UART_print.srcs/
       ├─ /sim_1/
