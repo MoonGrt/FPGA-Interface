@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Sun Oct 29 12:29:06 2023
+# Process ID: 30124
+# Current directory: F:/Study/digit_circuit/cpu_design/jtag/jtag.runs/clk_wiz_synth_1
+# Command line: vivado.exe -log clk_wiz.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source clk_wiz.tcl
+# Log file: F:/Study/digit_circuit/cpu_design/jtag/jtag.runs/clk_wiz_synth_1/clk_wiz.vds
+# Journal file: F:/Study/digit_circuit/cpu_design/jtag/jtag.runs/clk_wiz_synth_1\vivado.jou
+#-----------------------------------------------------------
+source clk_wiz.tcl -notrace
