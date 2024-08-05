@@ -10,21 +10,21 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-	<a href="https://github.com/MoonGrt/FPGA-Comm_interface">
+	<a href="https://github.com/MoonGrt/FPGA-Comm_Interface">
 	<img src="images/logo.png" alt="Logo" width="80" height="80">
 	</a>
-<h3 align="center">FPGA-Comm_interface</h3>
+<h3 align="center">FPGA-Comm_Interface</h3>
 	<p align="center">
 	This FPGA project features a comprehensive implementation of multiple communication interfaces, including UART, IIC, SPI, and CAN. The UART interface notably supports direct "print" functionality, making it easier to output data and messages directly from the FPGA. This project showcases robust and versatile data exchange capabilities, suitable for a wide range of applications requiring reliable and efficient communication protocols.
 	<br />
-	<a href="https://github.com/MoonGrt/FPGA-Comm_interface"><strong>Explore the docs »</strong></a>
+	<a href="https://github.com/MoonGrt/FPGA-Comm_Interface"><strong>Explore the docs »</strong></a>
 	<br />
 	<br />
-	<a href="https://github.com/MoonGrt/FPGA-Comm_interface">View Demo</a>
+	<a href="https://github.com/MoonGrt/FPGA-Comm_Interface">View Demo</a>
 	·
-	<a href="https://github.com/MoonGrt/FPGA-Comm_interface/issues">Report Bug</a>
+	<a href="https://github.com/MoonGrt/FPGA-Comm_Interface/issues">Report Bug</a>
 	·
-	<a href="https://github.com/MoonGrt/FPGA-Comm_interface/issues">Request Feature</a>
+	<a href="https://github.com/MoonGrt/FPGA-Comm_Interface/issues">Request Feature</a>
 	</p>
 </div>
 
@@ -50,6 +50,10 @@
   ├─ LICENSE
   ├─ README.md
   ├─ /CAN/
+  │ └─ /CAN.srcs/
+  │   ├─ sim_1
+  │   └─ /sources_1/
+  │     └─ can_rx.v
   ├─ /IIC/
   │ └─ /IIC.srcs/
   │   ├─ sim_1
@@ -59,6 +63,42 @@
   │     ├─ i2c_timing_ctrl.v
   │     └─ ram_init_file.mem
   ├─ /images/
+  ├─ /jtag/
+  │ └─ /jtag.srcs/
+  │   ├─ /constrs_1/
+  │   │ └─ /new/
+  │   │   └─ xdc.xdc
+  │   └─ /sources_1/
+  │     ├─ defines.v
+  │     ├─ full_handshake_rx.v
+  │     ├─ full_handshake_tx.v
+  │     ├─ jtag_dm.v
+  │     ├─ jtag_driver.v
+  │     ├─ jtag_top.v
+  │     ├─ top.v
+  │     └─ /ip/
+  │       └─ /clk_wiz/
+  │         ├─ clk_wiz.dcp
+  │         ├─ clk_wiz.v
+  │         ├─ clk_wiz.veo
+  │         ├─ clk_wiz.xci
+  │         ├─ clk_wiz.xdc
+  │         ├─ clk_wiz.xml
+  │         ├─ clk_wiz_board.xdc
+  │         ├─ clk_wiz_clk_wiz.v
+  │         ├─ clk_wiz_ooc.xdc
+  │         ├─ clk_wiz_sim_netlist.v
+  │         ├─ clk_wiz_sim_netlist.vhdl
+  │         ├─ clk_wiz_stub.v
+  │         ├─ clk_wiz_stub.vhdl
+  │         ├─ mmcm_pll_drp_func_7s_mmcm.vh
+  │         ├─ mmcm_pll_drp_func_7s_pll.vh
+  │         ├─ mmcm_pll_drp_func_us_mmcm.vh
+  │         ├─ mmcm_pll_drp_func_us_pll.vh
+  │         ├─ mmcm_pll_drp_func_us_plus_mmcm.vh
+  │         ├─ mmcm_pll_drp_func_us_plus_pll.vh
+  │         └─ /doc/
+  │           └─ clk_wiz_v5_4_changelog.txt
   ├─ /SPI/
   │ └─ /SPI.srcs/
   │   ├─ sim_1
@@ -119,14 +159,14 @@ Project Link: [MoonGrt/](https://github.com/MoonGrt/)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/MoonGrt/FPGA-Comm_interface.svg?style=for-the-badge
-[contributors-url]: https://github.com/MoonGrt/FPGA-Comm_interface/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/MoonGrt/FPGA-Comm_interface.svg?style=for-the-badge
-[forks-url]: https://github.com/MoonGrt/FPGA-Comm_interface/network/members
-[stars-shield]: https://img.shields.io/github/stars/MoonGrt/FPGA-Comm_interface.svg?style=for-the-badge
-[stars-url]: https://github.com/MoonGrt/FPGA-Comm_interface/stargazers
-[issues-shield]: https://img.shields.io/github/issues/MoonGrt/FPGA-Comm_interface.svg?style=for-the-badge
-[issues-url]: https://github.com/MoonGrt/FPGA-Comm_interface/issues
-[license-shield]: https://img.shields.io/github/license/MoonGrt/FPGA-Comm_interface.svg?style=for-the-badge
-[license-url]: https://github.com/MoonGrt/FPGA-Comm_interface/blob/master/LICENSE
+[contributors-shield]: https://img.shields.io/github/contributors/MoonGrt/FPGA-Comm_Interface.svg?style=for-the-badge
+[contributors-url]: https://github.com/MoonGrt/FPGA-Comm_Interface/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/MoonGrt/FPGA-Comm_Interface.svg?style=for-the-badge
+[forks-url]: https://github.com/MoonGrt/FPGA-Comm_Interface/network/members
+[stars-shield]: https://img.shields.io/github/stars/MoonGrt/FPGA-Comm_Interface.svg?style=for-the-badge
+[stars-url]: https://github.com/MoonGrt/FPGA-Comm_Interface/stargazers
+[issues-shield]: https://img.shields.io/github/issues/MoonGrt/FPGA-Comm_Interface.svg?style=for-the-badge
+[issues-url]: https://github.com/MoonGrt/FPGA-Comm_Interface/issues
+[license-shield]: https://img.shields.io/github/license/MoonGrt/FPGA-Comm_Interface.svg?style=for-the-badge
+[license-url]: https://github.com/MoonGrt/FPGA-Comm_Interface/blob/master/LICENSE
 
