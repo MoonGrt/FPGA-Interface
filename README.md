@@ -1,32 +1,34 @@
+**English | [简体中文](README_cn.md)**
 <div id="top"></div>
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
+[![License][license-shield]][license-url]
 
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-	<a href="https://github.com/MoonGrt/FPGA-Comm_Interface">
-	<img src="images/logo.png" alt="Logo" width="80" height="80">
-	</a>
+    <a href="https://github.com/MoonGrt/FPGA-Comm_Interface">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    </a>
 <h3 align="center">FPGA-Comm_Interface</h3>
-	<p align="center">
-	This FPGA project features a comprehensive implementation of multiple communication interfaces, including UART, IIC, SPI, and CAN. The UART interface notably supports direct "print" functionality, making it easier to output data and messages directly from the FPGA. This project showcases robust and versatile data exchange capabilities, suitable for a wide range of applications requiring reliable and efficient communication protocols.
-	<br />
-	<a href="https://github.com/MoonGrt/FPGA-Comm_Interface"><strong>Explore the docs »</strong></a>
-	<br />
-	<br />
-	<a href="https://github.com/MoonGrt/FPGA-Comm_Interface">View Demo</a>
-	·
-	<a href="https://github.com/MoonGrt/FPGA-Comm_Interface/issues">Report Bug</a>
-	·
-	<a href="https://github.com/MoonGrt/FPGA-Comm_Interface/issues">Request Feature</a>
-	</p>
+    <p align="center">
+    The FPGA-Comm_Interface repository contains commonly used FPGA communication modules for future development and integration. Each module is equipped with corresponding testbench files to ensure completeness and reliability.
+    <br />
+    <a href="https://github.com/MoonGrt/FPGA-Comm_Interface"><strong>Explore the docs »</strong></a>
+    <br />
+    <a href="https://github.com/MoonGrt/FPGA-Comm_Interface">View Demo</a>
+    ·
+    <a href="https://github.com/MoonGrt/FPGA-Comm_Interface/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/MoonGrt/FPGA-Comm_Interface/issues">Request Feature</a>
+    </p>
 </div>
+
+
 
 
 <!-- CONTENTS -->
@@ -34,12 +36,20 @@
   <summary>Contents</summary>
   <ol>
     <li><a href="#file-tree">File Tree</a></li>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+      </ul>
+    </li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
+
+
+
 
 
 <!-- FILE TREE -->
@@ -50,76 +60,82 @@
   ├─ LICENSE
   ├─ README.md
   ├─ /CAN/
-  │ └─ /CAN.srcs/
-  │   ├─ sim_1
-  │   └─ /sources_1/
-  │     └─ can_rx.v
+  │ ├─ sim
+  │ └─ /src/
+  │   └─ can_rx.v
   ├─ /IIC/
-  │ └─ /IIC.srcs/
-  │   ├─ sim_1
-  │   └─ /sources_1/
-  │     ├─ i2c_edid.v
-  │     ├─ i2c_OV7670_RGB565_config.v
-  │     ├─ i2c_timing_ctrl.v
-  │     └─ ram_init_file.mem
+  │ ├─ sim
+  │ └─ /src/
+  │   ├─ i2c_edid.v
+  │   ├─ i2c_OV7670_RGB565_config.v
+  │   ├─ i2c_timing_ctrl.v
+  │   └─ ram_init_file.mem
   ├─ /images/
-  ├─ /jtag/
-  │ └─ /jtag.srcs/
-  │   ├─ /constrs_1/
-  │   │ └─ /new/
-  │   │   └─ xdc.xdc
-  │   └─ /sources_1/
-  │     ├─ defines.v
-  │     ├─ full_handshake_rx.v
-  │     ├─ full_handshake_tx.v
-  │     ├─ jtag_dm.v
-  │     ├─ jtag_driver.v
-  │     ├─ jtag_top.v
-  │     ├─ top.v
-  │     └─ /ip/
-  │       └─ /clk_wiz/
-  │         ├─ clk_wiz.dcp
-  │         ├─ clk_wiz.v
-  │         ├─ clk_wiz.veo
-  │         ├─ clk_wiz.xci
-  │         ├─ clk_wiz.xdc
-  │         ├─ clk_wiz.xml
-  │         ├─ clk_wiz_board.xdc
-  │         ├─ clk_wiz_clk_wiz.v
-  │         ├─ clk_wiz_ooc.xdc
-  │         ├─ clk_wiz_sim_netlist.v
-  │         ├─ clk_wiz_sim_netlist.vhdl
-  │         ├─ clk_wiz_stub.v
-  │         ├─ clk_wiz_stub.vhdl
-  │         ├─ mmcm_pll_drp_func_7s_mmcm.vh
-  │         ├─ mmcm_pll_drp_func_7s_pll.vh
-  │         ├─ mmcm_pll_drp_func_us_mmcm.vh
-  │         ├─ mmcm_pll_drp_func_us_pll.vh
-  │         ├─ mmcm_pll_drp_func_us_plus_mmcm.vh
-  │         ├─ mmcm_pll_drp_func_us_plus_pll.vh
-  │         └─ /doc/
-  │           └─ clk_wiz_v5_4_changelog.txt
+  ├─ /JTAG/
+  │ ├─ sim
+  │ └─ /src/
+  │   ├─ defines.v
+  │   ├─ full_handshake_rx.v
+  │   ├─ full_handshake_tx.v
+  │   ├─ jtag_dm.v
+  │   ├─ jtag_driver.v
+  │   ├─ jtag_top.v
+  │   └─ top.v
   ├─ /SPI/
-  │ └─ /SPI.srcs/
-  │   ├─ sim_1
-  │   └─ /sources_1/
-  │     ├─ gamepad.vhd
-  │     └─ spi_driver.v
-  └─ /UART_print/
-    └─ /UART_print.srcs/
-      ├─ /sim_1/
-      │ └─ top_tb.v
-      └─ /sources_1/
-        ├─ print.vh
-        ├─ top.v
-        ├─ uart_rx.v
-        └─ uart_tx.v
-
+  │ ├─ sim
+  │ └─ /src/
+  │   ├─ gamepad.vhd
+  │   ├─ spi.v
+  │   └─ spi_driver.v
+  └─ /UART/
+    ├─ /sim/
+    │ └─ top_tb.v
+    └─ /src/
+      ├─ print.vh
+      ├─ top.v
+      ├─ uart_rx.v
+      └─ uart_tx.v
 ```
+
+
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+<p>
+  The FPGA-Comm_Interface repository is a comprehensive library of communication modules specifically designed for FPGA developers, aimed at providing convenient FPGA communication solutions. This repository aggregates a variety of commonly used communication interface modules, allowing developers to quickly integrate them into different projects. Each module is equipped with corresponding testbench files, assisting users in verifying functionality and performance, ensuring system stability and reliability.
+</p>
+
+<h3>Description</h3>
+<p>This repository includes the following communication modules, each accompanied by detailed documentation and test examples to help users better understand and utilize them:</p>
+<ul>
+  <li><strong>JTAG</strong>: 
+    JTAG (Joint Test Action Group) is a widely used debugging and programming interface that supports various programming tools and debuggers. This module allows users to easily interact with the FPGA, perform online debugging, and programming, enhancing development efficiency.
+  </li>
+  <li><strong>CAN</strong>: 
+    CAN (Controller Area Network) is a highly reliable serial communication protocol, particularly suited for automotive and industrial automation systems. This module provides a complete implementation of the CAN communication protocol, including sending, receiving, and error handling functionalities, making it ideal for embedded applications that require real-time responsiveness.
+  </li>
+  <li><strong>IIC</strong>: 
+    I²C (Inter-Integrated Circuit) is a two-wire serial communication protocol widely used for various low-speed peripheral communications. This module supports master-slave mode communication, making it suitable for connections between sensors, memory, and other devices. Users can adjust the data rate and communication parameters according to their needs.
+  </li>
+  <li><strong>SPI</strong>: 
+    SPI (Serial Peripheral Interface) is a high-speed synchronous serial communication protocol suitable for high-speed data transfer scenarios. This module supports full-duplex communication, allowing users to easily configure connections with a variety of external devices, making it particularly suitable for data acquisition and signal processing applications.
+  </li>
+  <li><strong>UART</strong>: 
+    UART (Universal Asynchronous Receiver-Transmitter) is a classic serial communication protocol widely used for data transmission between microcontrollers and computers. This module supports configurable baud rates and data bit settings, making it suitable for wireless communication and various serial devices.
+  </li>
+</ul>
+<p>
+  Each module not only includes core functionality implementations but also comes with testbench files to help developers verify functionality, performance, and stability. Users can modify and extend them according to their project needs, improving development efficiency and shortening project cycles.
+</p>
+
+<p align="right">(<a href="#top">top</a>)</p>
+
 
 
 <!-- CONTRIBUTING -->
 ## Contributing
+
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 Don't forget to give the project a star! Thanks again!
@@ -131,21 +147,27 @@ Don't forget to give the project a star! Thanks again!
 <p align="right">(<a href="#top">top</a>)</p>
 
 
+
 <!-- LICENSE -->
 ## License
+
 Distributed under the MIT License. See `LICENSE` for more information.
 <p align="right">(<a href="#top">top</a>)</p>
 
 
+
 <!-- CONTACT -->
 ## Contact
+
 MoonGrt - 1561145394@qq.com
 Project Link: [MoonGrt/](https://github.com/MoonGrt/)
 <p align="right">(<a href="#top">top</a>)</p>
 
 
+
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
+
 * [Choose an Open Source License](https://choosealicense.com)
 * [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
 * [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
@@ -153,8 +175,10 @@ Project Link: [MoonGrt/](https://github.com/MoonGrt/)
 * [Img Shields](https://shields.io)
 * [GitHub Pages](https://pages.github.com)
 * [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)   
+* [React Icons](https://react-icons.github.io/react-icons/search)
 <p align="right">(<a href="#top">top</a>)</p>
+
+
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
